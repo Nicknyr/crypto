@@ -33,7 +33,26 @@ class CoinList extends Component {
       <div className="App">
         {Object.keys(data).map((key) => (
           <div className="container">
-            <span className="left">{key}</span>
+            <table className="table table-striped">
+            <thead>
+              <tr>
+                <th>Coin</th>
+                <th>Logo</th>
+                <th>Overview</th>
+                <th>Algorithm</th>
+              </tr>
+             </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td>{key}</td>
+                <td>{data[key].ImageUrl}</td>
+                <td>{data[key].Url}</td>
+                <td>{data[key].Algorithm}</td>
+              </tr>
+            </tbody>
+
+            </table>
           </div>
         ))}
       </div>
@@ -42,3 +61,11 @@ class CoinList extends Component {
 }
 
 export default CoinList;
+
+
+/*
+<span className="coin">{key}</span>
+<span className="image">{data[key].ImageUrl}</span>
+<span className="symbol"><a href="www.cryptocompare.com"></a>{data[key].Url}</span>
+<span className="algo">{data[key].Algorithm}</span>
+*/

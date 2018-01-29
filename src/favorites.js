@@ -30,7 +30,7 @@ class Favorites extends Component {
     return (
       <div className="App">
         {Object.keys(this.state.coinList).map((key) => (
-          <div className="container">
+          <div className="fav-container">
             <span className="left">{key}</span>
             <span className="right"><NumberFormat value={this.state.coinList[key].USD} displayType={'text'} decimalPrecision={2} thousandSeparator={true} prefix={'$'} /></span>
           </div>
