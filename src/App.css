@@ -1,5 +1,10 @@
-.right {
+.one {
   float: right;
+}
+
+.three {
+  float: right;
+  margin-right: 150px;
 }
 
 .App {

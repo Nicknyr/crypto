@@ -32,8 +32,20 @@ render() {
     <div className="App">
       {Object.keys(data).map((key) => (
         <div className="container">
-          <span className="left">{data[key].CoinName} </span>
-          <span className="right">{key}</span>
+        <table className="table table-striped">
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td>{data[key].CoinName}</td>
+            <td>{key}</td>
+            <td><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo" width="50px" height="50px"/></td>
+            <td>{data[key].Algorithm}</td>
+          </tr>
+        </tbody>
+
+
+        </table>
+
         </div>
       ))}
     </div>
