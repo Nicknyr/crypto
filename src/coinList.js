@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from "axios";
-var NumberFormat = require('react-number-format');
 
 class CoinList extends Component {
   constructor(props) {
@@ -38,8 +37,9 @@ render() {
             <th scope="row"></th>
             <td>{data[key].CoinName}</td>
             <td>{key}</td>
-            <td><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo" width="50px" height="50px"/></td>
             <td>{data[key].Algorithm}</td>
+            <td>{data[key].SortOrder}</td>
+
           </tr>
         </tbody>
 
@@ -89,5 +89,9 @@ export default CoinList;
     </div>
   ))}
 </div>
+
+
+<td><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo"/></td>
+
 
 */

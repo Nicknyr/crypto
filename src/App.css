@@ -1,13 +1,13 @@
 .one {
-  float: right;
-}
+  float: right; }
 
 .three {
   float: right;
-  margin-right: 150px;
-}
+  margin-right: 150px; }
 
 .App {
   width: 60%;
-  margin: auto;
-}
+  margin: auto; }
+
+body {
+  background-color: red; }
