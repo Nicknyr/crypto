@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Table } from 'react-bootstrap';
 import './App.css';
 import axios from "axios";
 
@@ -37,7 +36,7 @@ render() {
           <thead>
             <tr>
               <th className="col-md-2">Coin</th>
-              <th className="col-md-2">Logo</th>
+              <th className="col-md-2">Symbol</th>
               <th className="col-md-2">Algorithm</th>
               <th className="col-md-2">#</th>
             </tr>
@@ -63,64 +62,7 @@ export default CoinList;
 
 
 /*
-<span className="coin">{key}</span>
-<span className="image">{data[key].ImageUrl}</span>
-<span className="symbol"><a href="www.cryptocompare.com"></a>{data[key].Url}</span>
-<span className="algo">{data[key].Algorithm}</span>
-
-
-<div className="App">
-  {Object.keys(data).map((key) => (
-    <div className="container">
-      <table className="table table-striped">
-      <thead>
-        <tr>
-          <th>Coin</th>
-          <th>Logo</th>
-          <th>Overview</th>
-          <th>Algorithm</th>
-        </tr>
-       </thead>
-      <tbody>
-        <tr>
-          <th scope="row"></th>
-          <td>{key}</td>
-          <td>{data[key].ImageUrl}</td>
-          <td>{data[key].Url}</td>
-          <td>{data[key].Algorithm}</td>
-        </tr>
-      </tbody>
-
-      </table>
-    </div>
-  ))}
-</div>
-
 
 <td><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo"/></td>
-
-
-
-return (
-  <div className="App">
-    {Object.keys(data).map((key) => (
-      <div className="container">
-        <table className="table table-striped">
-          <tbody>
-            <tr>
-              <th scope="row"></th>
-              <td>{data[key].CoinName}</td>
-              <td>{key}</td>
-              <td>{data[key].Algorithm}</td>
-              <td>{data[key].SortOrder}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    ))}
-  </div>
-);
-}
-}
 
 */
