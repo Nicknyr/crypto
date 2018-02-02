@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Table } from 'react-bootstrap';
 import './App.css';
 import axios from "axios";
 
@@ -27,31 +28,36 @@ class CoinList extends Component {
 render() {
   const data = this.state.coinList.Data;
   if (data == null) return null;
+
   return (
     <div className="App">
       {Object.keys(data).map((key) => (
         <div className="container">
-        <table className="table table-striped">
-        <tbody>
-          <tr>
-            <th scope="row"></th>
-            <td>{data[key].CoinName}</td>
-            <td>{key}</td>
-            <td>{data[key].Algorithm}</td>
-            <td>{data[key].SortOrder}</td>
-
-          </tr>
-        </tbody>
-
-
-        </table>
-
+          <table className="table table-striped">
+          <thead>
+            <tr>
+              <th className="col-md-2">Coin</th>
+              <th className="col-md-2">Logo</th>
+              <th className="col-md-2">Algorithm</th>
+              <th className="col-md-2">#</th>
+            </tr>
+           </thead>
+            <tbody>
+              <tr>
+                <td className="col-md-2">{data[key].CoinName}</td>
+                <td className="col-md-2">{key}</td>
+                <td className="col-md-2">{data[key].Algorithm}</td>
+                <td className="col-md-2">{data[key].SortOrder}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       ))}
     </div>
   );
+ }
 }
-}
+
 
 export default CoinList;
 
@@ -93,5 +99,28 @@ export default CoinList;
 
 <td><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo"/></td>
 
+
+
+return (
+  <div className="App">
+    {Object.keys(data).map((key) => (
+      <div className="container">
+        <table className="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <td>{data[key].CoinName}</td>
+              <td>{key}</td>
+              <td>{data[key].Algorithm}</td>
+              <td>{data[key].SortOrder}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ))}
+  </div>
+);
+}
+}
 
 */
