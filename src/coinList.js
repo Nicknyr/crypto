@@ -34,11 +34,12 @@ render() {
           <table className="table table-striped">
             <tbody>
               <tr>
-                <td className="col-md-2" id="name">{data[key].CoinName}</td>
+                <td className="col-md-2" id="name"><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo" width="30px"/>
+                {data[key].CoinName}</td>
+                <td className="col-md-2">$100</td>
                 <td className="col-md-2">{key}</td>
                 <td className="col-md-2">{data[key].Algorithm}</td>
                 <td className="col-md-2">{data[key].TotalCoinSupply}</td>
-                <td className="col-md-2">{data[key].SortOrder}</td>
               </tr>
             </tbody>
           </table>
@@ -54,18 +55,6 @@ export default CoinList;
 
 
 /*
-
-<thead>
-  <tr>
-    <th className="col-md-2">Coin</th>
-    <th className="col-md-2">Logo</th>
-    <th className="col-md-2">Symbol</th>
-    <th className="col-md-2">Algorithm</th>
-    <th className="col-md-2">Total Supply</th>
-    <th className="col-md-2">#</th>
-  </tr>
- </thead>
-
 
 <td><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo" width="40px"/></td>
 
