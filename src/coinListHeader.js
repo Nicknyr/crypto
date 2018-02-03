@@ -8,7 +8,7 @@ function TableHeader() {
         <table className="table table-striped">
         <thead>
           <tr>
-            <th className="col-md-2">Coin</th>
+            <th className="col-md-3">Coin</th>
             <th className="col-md-2">Value (USD)</th>
             <th className="col-md-2">Symbol</th>
             <th className="col-md-2">Algorithm</th>

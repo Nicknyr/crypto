@@ -12,7 +12,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        
+        <Favorites />
+        <CoinPrices />
         <TableHeader />
         <CoinList />
       </div>

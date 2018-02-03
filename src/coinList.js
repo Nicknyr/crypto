@@ -34,7 +34,7 @@ render() {
           <table className="table table-striped">
             <tbody>
               <tr>
-                <td className="col-md-2" id="name"><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo" width="30px"/>
+                <td className="col-md-3" id="name"><img src={`http://www.cryptocompare.com/${data[key].ImageUrl}`} alt="logo" width="30px"/>
                 {data[key].CoinName}</td>
                 <td className="col-md-2">$100</td>
                 <td className="col-md-2">{key}</td>

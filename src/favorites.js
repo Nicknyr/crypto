@@ -15,7 +15,7 @@ class Favorites extends Component {
 
 
   componentDidMount() {
-    axios.get(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,LTC,ETH,IOT,TRX&tsyms=USD`)
+    axios.get(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,XRP,LTC,BCH,EOS,NEO,DGD,TRX,ETC,XLM,ADA,QTUM,DASH,XMR,IOT,VEN,ICX,ZEC,ELF&tsyms=USD`)
     .then(res => {
       const coins = res.data;
       //console.log(coins);
@@ -30,9 +30,15 @@ class Favorites extends Component {
     return (
       <div className="App">
         {Object.keys(this.state.coinList).map((key) => (
-          <div className="fav-container">
-            <span className="left">{key}</span>
-            <span className="right"><NumberFormat value={this.state.coinList[key].USD} displayType={'text'} decimalPrecision={2} thousandSeparator={true} prefix={'$'} /></span>
+          <div className="container">
+            <table className="table table-striped">
+              <tbody>
+                <tr>
+                  <td className="col-md-2" id="name">{key}</td>
+                  <td className="col-md-2"><NumberFormat value={this.state.coinList[key].USD} displayType={'text'} decimalPrecision={2} thousandSeparator={true} prefix={'$'}/></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         ))}
       </div>
