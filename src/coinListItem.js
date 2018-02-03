@@ -1,17 +1,16 @@
 import React from 'react';
 
 
-const CoinListItem = (props) => {
-  const data = this.state.coinList.Data;
-  if (data == null) return null;
-
+const CoinListItem = ({ data }) => {
   return (
     <tr>
-      <td className="col-md-2">{props.data[key].CoinName}</td>
-      <td className="col-md-2">{props.key}</td>
-      <td className="col-md-2">{props.data[key].Algorithm}</td>
-      <td className="col-md-2">{props.data[key].TotalCoinSupply}</td>
-      <td className="col-md-2">{props.data[key].SortOrder}</td>
+      <td className="col-md-3" id="name">
+        <img src={`http://www.cryptocompare.com/${data.ImageUrl}`} alt="logo" width="40px"/>
+        {data.CoinName}
+      </td>
+      <td className="col-md-2">$100000000</td>
+      <td className="col-md-2">{data.Algorithm}</td>
+      <td className="col-md-2">{data.TotalCoinSupply}</td>
     </tr>
 
   );
