@@ -3,6 +3,23 @@ import CoinListItem from './coinListItem.js';
 
 
 export default class NewCoinList extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      coinList: []
+    };
+  }
+
+
+
+  componentDidMount() {
+    axios.get(`https://min-api.cryptocompare.com/data/all/coinlist`)
+    .then(res => {
+      const coins = res.data;
+      this.setState({ coinList: coins});
+    });
+  }
 
   renderList() {
     const data = this.state.coinList.Data;

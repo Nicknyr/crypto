@@ -10,6 +10,7 @@ const CoinListItem = (props) => {
       <td className="col-md-2">{props.data[key].CoinName}</td>
       <td className="col-md-2">{props.key}</td>
       <td className="col-md-2">{props.data[key].Algorithm}</td>
+      <td className="col-md-2">{props.data[key].TotalCoinSupply}</td>
       <td className="col-md-2">{props.data[key].SortOrder}</td>
     </tr>
 

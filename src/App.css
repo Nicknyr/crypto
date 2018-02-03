@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich|Suez+One");
 body {
   background-color: white;
-  font-family: 'Aldrich', sans-serif; }
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.5em; }
 
 th {
   font-family: 'Suez One', serif;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: normal; }
+
+#name {
+  color: #ffc107;
+  font-weight: bolder; }
+
+.container {
+  width: 70%; }
