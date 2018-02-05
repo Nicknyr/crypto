@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CoinListItem from './CoinList/coinListItem.js';
+import CoinListItem from './coinListItem.js';
 
 class NewCoinList extends React.Component {
   constructor(props) {
@@ -23,7 +23,6 @@ class NewCoinList extends React.Component {
 
     return Object.keys(data).map((symbol) => (
       <CoinListItem data={data[symbol]} />
-
     ))
   }
 
