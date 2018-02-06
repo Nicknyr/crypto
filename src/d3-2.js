@@ -66,7 +66,7 @@ class Chart extends React.Component {
 
   render() {
       return (
-      <div className="cointaner">
+      <div className="container">
          <svg width="960" height="500" ref={d => (this.svg = d)}/>
       </div>
 

@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich|Suez+One");
+.Header {
+  width: 100%;
+  height: 2em;
+  background-color: #191919;
+  margin-bottom: 5em; }
+
+.Footer {
+  height: 20em;
+  width: 100%;
+  background-color: #191919;
+  margin-top: 5em; }
+
 body {
   background-color: snow;
   font-family: 'Aldrich', sans-serif;
@@ -20,20 +32,3 @@ td {
 
 .container {
   width: 80%; }
-
-.Header {
-  width: 100%;
-  height: 2em;
-  background-color: #191919;
-  margin-bottom: 5em; }
-
-.Footer {
-  height: 20em;
-  width: 100%;
-  background-color: #191919;
-  margin-top: 5em; }
-
-h1 {
-  margin: auto;
-  margin: 5em;
-  font-size: 20em; }

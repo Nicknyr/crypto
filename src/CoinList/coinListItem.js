@@ -1,4 +1,7 @@
 import React from 'react';
+import * as d3 from 'd3';
+import Chart from '../d3-2.js';
+
 
 
 const CoinListItem = ({ data }) => {
