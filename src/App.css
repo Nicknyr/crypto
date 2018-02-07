@@ -1,15 +1,69 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich|Suez+One");
 .Header {
   width: 100%;
-  height: 2em;
+  height: auto;
   background-color: #191919;
   margin-bottom: 5em; }
+  .Header .nav {
+    width: 100%; }
+    .Header .nav ul {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 1em;
+      text-align: center; }
+
+@media (min-width: 1200px) {
+  .Header {
+    height: auto;
+    margin-bottom: 6em; }
+    .Header .nav ul {
+      width: 100%;
+      float: right;
+      padding-top: .1em;
+      padding-bottom: .1em;
+      padding-right: 1.5em;
+      margin: 0; }
+      .Header .nav ul li {
+        display: inline-block;
+        padding: 1em;
+        float: right; } }
 
 .Footer {
-  height: 20em;
+  height: auto;
   width: 100%;
   background-color: #191919;
   margin-top: 5em; }
+  .Footer .links {
+    padding-top: 3em; }
+    .Footer .links ul {
+      float: left;
+      padding: 0; }
+      .Footer .links ul li {
+        padding: .7em;
+        color: snow; }
+  .Footer .cryptocompare {
+    clear: both;
+    color: snow;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    text-align: center; }
+    .Footer .cryptocompare p {
+      padding-left: .7em;
+      padding-right: .7em; }
+    .Footer .cryptocompare a {
+      display: inline;
+      padding-left: .2em;
+      padding-right: .2em; }
+
+@media (min-width: 1200px) {
+  .Footer {
+    margin-top: 10em; }
+    .Footer .links ul {
+      text-align: center;
+      float: none; }
+      .Footer .links ul li {
+        display: inline-block;
+        padding: 2.5em; } }
 
 body {
   background-color: snow;
@@ -32,3 +86,71 @@ td {
 
 .container {
   width: 80%; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+a:hover {
+  color: #ffc107; }
+
+/*
+  Extra small devices (phones, less than 768px)
+  No media query since this is the default in Bootstrap
+
+  Small devices (tablets, 768px and up)
+  @media (min-width: 768px) { ... }
+
+  Medium devices (desktops, 992px and up)
+  @media (min-width: 992px) { ... }
+
+  Large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { ... }
+
+*/
+@media (max-width: 400px) {
+  .container {
+    width: 90%; }
+  h2 {
+    text-align: center;
+    margin-bottom: 1em; }
+  p {
+    line-height: 1.8;
+    font-size: 1em;
+    margin-top: 2em; }
+  a {
+    text-align: center;
+    font-size: 1.1em;
+    display: block; }
+  /*  .chart-container {
+    width: 100%;
+  }
+*/
+  .svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden; }
+  .svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0; } }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 80%; }
+  h2 {
+    text-align: center;
+    margin-bottom: 1em; }
+  .coin-info p {
+    width: 80%;
+    margin: auto;
+    padding-top: 2em;
+    padding-bottom: 1em; }
+  .coin-info a {
+    display: block;
+    text-align: center; } }

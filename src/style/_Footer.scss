@@ -1,6 +1,59 @@
 .Footer {
-  height: 20em;
+  height: auto;
   width: 100%;
   background-color: #191919;
   margin-top: 5em;
+
+  .links {
+    padding-top: 3em;
+
+    ul {
+      float: left;
+      padding: 0;
+
+      li  {
+        padding: .7em;
+        color: snow;
+      }
+    }
+  }
+
+  .cryptocompare {
+    clear: both;
+    color: snow;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    text-align: center;
+
+    p {
+      padding-left: .7em;
+      padding-right: .7em;
+    }
+
+    a {
+      display: inline;
+      padding-left: .2em;
+      padding-right: .2em;
+    }
+
+  }
+}
+
+//Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .Footer {
+    margin-top: 10em;
+
+    .links {
+      ul {
+        text-align: center;
+        float: none;
+
+        li {
+          display: inline-block;
+          padding: 2.5em;
+        }
+      }
+    }
+  }
 }

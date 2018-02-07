@@ -1,5 +1,5 @@
-import React from 'react'
-import * as d3 from 'd3'
+import React from 'react';
+import * as d3 from 'd3';
 
 
 class Chart extends React.Component {
@@ -20,6 +20,18 @@ class Chart extends React.Component {
           width = +svg.attr("width") - margin.left - margin.right,
           height = +svg.attr("height") - margin.top - margin.bottom,
           g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // Added this to try to make it responsive
+    d3.select("div#chartId")
+       .append("div")
+       .classed("svg-container", true) //container class to make it responsive
+       .append("svg")
+       //responsive SVG needs these 2 attributes and no width and height attr
+       .attr("preserveAspectRatio", "xMinYMin meet")
+       .attr("viewBox", "0 0 600 400")
+       //class to make it responsive
+       .classed("svg-content-responsive", true);
+    // End of new stuff
 
       var parseTime = d3.timeParse("%d-%b-%y");
 
@@ -66,9 +78,10 @@ class Chart extends React.Component {
 
   render() {
       return (
-      <div className="container">
-         <svg width="960" height="500" ref={d => (this.svg = d)}/>
-      </div>
+          <svg id="chartId" width="960" height="500"
+            viewBox="0 0 960 500" preserveAspectRatio="xMidYMid meet"
+            ref={d => (this.svg = d)}
+          />
 
      )
     }
