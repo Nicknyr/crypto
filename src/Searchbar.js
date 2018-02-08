@@ -19,15 +19,16 @@ export default class Searchbar extends Component {
     });
   }
 
-
+  // https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=BTC,USD,EUR
   loadSearchResults(event) {
     event.preventDefault();
     var search = this.state.currentText;
     axios.get(`https://min-api.cryptocompare.com/data/price?fsym=`+ search + `&tsyms=BTC,USD,EUR`)
       .then(res => {
-
+        const results = res.data;
+        console.log(results);
         // results is set up for the MovieDB API. I have to change the following line so it is appropriate for cryptocompare API
-        const results = res.data.results.map(obj => ({title: obj.title, overview: obj.overview, poster: obj.poster_path, vote: obj.vote_average}));
+        //const results = res.data.results.map(obj => ({title: obj.title, overview: obj.overview, poster: //obj.poster_path, vote: obj.vote_average}));
 
         this.setState({
           results,
