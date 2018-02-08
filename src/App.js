@@ -12,7 +12,7 @@ import Chart from './d3-2.js';
 import InfoPage from './info_page.js';
 import CoinInfo from './snapshot.js';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Routes from './routes';
+import Searchbar from './Searchbar.js';
 
 class App extends Component {
 
