@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import CoinListItem from './CoinList/coinListItem.js';
+import Header from './Header.js';
+import Footer from './Footer.js';
 
 class NewCoinList extends React.Component {
   constructor(props) {
@@ -29,20 +31,24 @@ class NewCoinList extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <table className='table table-striped'>
-          <thead>
-            <tr>
-              <th className="col-md-3">Coin</th>
-              <th className="col-md-3">Value (USD)</th>
-              <th className="col-md-3">Algorithm</th>
-              <th className="col-md-3">Total Supply</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.renderList()}
-          </tbody>
-        </table>
+      <div>
+        <Header/>
+        <div className="container">
+          <table className='table table-striped'>
+            <thead>
+              <tr>
+                <th className="col-md-3">Coin</th>
+                <th className="col-md-3">Value (USD)</th>
+                <th className="col-md-3">Algorithm</th>
+                <th className="col-md-3">Total Supply</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.renderList()}
+            </tbody>
+          </table>
+        </div>
+        <Footer/>
       </div>
     )
   }

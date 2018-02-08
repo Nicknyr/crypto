@@ -7,9 +7,9 @@ const Header = () => {
       <div className="nav">
         <ul>
           <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
+          <li><a href="/coinlist">List</a></li>
+          <li><a href="/info">Info Page</a></li>
+          <li><a href="/">Home</a></li>
         </ul>
       </div>
 

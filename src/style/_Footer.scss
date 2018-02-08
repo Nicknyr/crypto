@@ -3,6 +3,7 @@
   width: 100%;
   background-color: #191919;
   margin-top: 5em;
+  clear: both;
 
   .links {
     padding-top: 3em;
@@ -43,6 +44,7 @@
 @media (min-width: 1200px) {
   .Footer {
     margin-top: 10em;
+    clear: both;
 
     .links {
       ul {

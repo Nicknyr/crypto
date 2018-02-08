@@ -32,7 +32,8 @@
   height: auto;
   width: 100%;
   background-color: #191919;
-  margin-top: 5em; }
+  margin-top: 5em;
+  clear: both; }
   .Footer .links {
     padding-top: 3em; }
     .Footer .links ul {
@@ -57,7 +58,8 @@
 
 @media (min-width: 1200px) {
   .Footer {
-    margin-top: 10em; }
+    margin-top: 10em;
+    clear: both; }
     .Footer .links ul {
       text-align: center;
       float: none; }
@@ -114,10 +116,12 @@ a:hover {
   h2 {
     text-align: center;
     margin-bottom: 1em; }
+  h3 {
+    text-align: center;
+    margin-top: 2em; }
   p {
     line-height: 1.8;
-    font-size: 1em;
-    margin-top: 2em; }
+    font-size: 1em; }
   a {
     text-align: center;
     font-size: 1.1em;
@@ -146,11 +150,16 @@ a:hover {
   h2 {
     text-align: center;
     margin-bottom: 1em; }
+  h3 {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.4em;
+    font-weight: bolder; }
   .coin-info p {
     width: 80%;
     margin: auto;
-    padding-top: 2em;
-    padding-bottom: 1em; }
+    padding-top: .5em;
+    padding-bottom: .5em; }
   .coin-info a {
     display: block;
     text-align: center; } }
