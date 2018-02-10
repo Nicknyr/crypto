@@ -11,8 +11,10 @@ import * as d3 from 'd3';
 import Chart from './d3-2.js';
 import InfoPage from './info_page.js';
 import CoinInfo from './snapshot.js';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Searchbar from './Searchbar.js';
+import Autosuggest from 'react-autosuggest';
+
 
 class App extends Component {
 
@@ -27,6 +29,7 @@ class App extends Component {
               <Route exact path="/coininfo" component={CoinInfo}/>
               <Route exact path="/info" component={InfoPage}/>
               <Route exact path="/coinlist" component={NewCoinList}/>
+              <Route exact path="/autosuggest" component={Autosuggest}/>
             </Switch>
           </BrowserRouter>
         </div>

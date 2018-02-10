@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch, NavLink} from 'react-router-dom';
 
 
 const Header = () => {
@@ -6,10 +7,9 @@ const Header = () => {
     <div className="Header">
       <div className="nav">
         <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="/coinlist">List</a></li>
-          <li><a href="/info">Info Page</a></li>
-          <li><a href="/">Home</a></li>
+          <li><NavLink to="/" exact activeStyle={{color: "red"}}>Home</NavLink></li>
+          <li>><NavLink to="/info" activeStyle={{color: "red"}}>Info</NavLink></li>
+          <li>><NavLink to="/coinlist" activeStyle={{color: "red"}}>List</NavLink></li>
         </ul>
       </div>
 

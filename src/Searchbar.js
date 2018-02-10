@@ -30,6 +30,10 @@ export default class Searchbar extends Component {
         // results is set up for the MovieDB API. I have to change the following line so it is appropriate for cryptocompare API
         //const results = res.data.results.map(obj => ({title: obj.title, overview: obj.overview, poster: //obj.poster_path, vote: obj.vote_average}));
 
+        // Prints out the ref I added to the input in the form ref="searchTerm"
+        var search = this.refs.searchTerm.value;
+        console.log(search);
+
         this.setState({
           results,
           header: "Search Results"
@@ -40,12 +44,12 @@ export default class Searchbar extends Component {
 
   render() {
     return (
-      <div className="search-box">
-        <form>
-          <input type="text" placeholder={this.state.currentText} onChange={(event) => this.onHandleChane(event)}/>
-          <button onClick={this.loadSearchResults.bind(this)}><img id ="mag" src ={'magnify.png'} alt=""/></button>
-        </form>
-      </div>
+        <div className="search-box">
+          <form>
+            <input type="text" ref="searchTerm" placeholder={this.state.currentText} onChange={(event) => this.onHandleChane(event)}/>
+            <button onClick={this.loadSearchResults.bind(this)}><img id ="mag" src ={'magnify.png'} alt=""/></button>
+          </form>
+        </div>
     );
   }
 }

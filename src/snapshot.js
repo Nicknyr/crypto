@@ -11,8 +11,10 @@ class CoinInfo extends React.Component {
     }
   }
 
+  //https://cors-anywhere.herokuapp.com/
+  //https://www.cryptocompare.com/api/data/coinsnapshotfullbyid/?id=1182
   componentDidMount() {
-    axios.get(`https://www.cryptocompare.com/api/data/coinsnapshotfullbyid/?id=1182`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://www.cryptocompare.com/api/data/coinsnapshotfullbyid/?id=1182`)
     .then(res => {
       const info = res.data;
       this.setState({ coinInfo: info});
@@ -26,7 +28,6 @@ class CoinInfo extends React.Component {
 
 
   render() {
-
     return (
       <div className="container">
         <h1>Coin Info Page</h1>
