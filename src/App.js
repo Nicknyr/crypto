@@ -27,9 +27,6 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home}/>
               <Route exact path="/coininfo" component={CoinInfo}/>
-              <Route exact path="/info" component={InfoPage}/>
-              <Route exact path="/coinlist" component={NewCoinList}/>
-              <Route exact path="/autosuggest" component={Autosuggest}/>
             </Switch>
           </BrowserRouter>
         </div>

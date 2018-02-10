@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+//import InfoPage from './info_page.js';
 
 
 class CoinInfo extends React.Component {
@@ -7,7 +8,7 @@ class CoinInfo extends React.Component {
     super(props);
 
     this.state = {
-      coinName: '',
+    /*  coinName: '',
       coinImage: '',
       coinDescription: '',
       coinFeatures: '',
@@ -15,6 +16,8 @@ class CoinInfo extends React.Component {
       coinSupply: '',
       coinMined: '',
       website: ''
+    */
+      coinData: []
     }
   }
 
@@ -25,7 +28,7 @@ class CoinInfo extends React.Component {
     .then(res => {
         const info = res.data.Data.General;
         this.setState({
-          coinName: info.Name,
+        /*  coinName: info.Name,
           coinImage: info.ImageUrl,
           coinDescription: info.Description,
           coinFeatures: info.Features,
@@ -33,8 +36,10 @@ class CoinInfo extends React.Component {
           coinSupply: info.TotalCoinSupply,
           coinMined: info.TotalCoinsMined,
           website: info.Website
+        */
+          coinData: info
         });
-        console.log(this.state);
+        //console.log(this.state);
     })
     .catch(error => {
       console.log(error);
@@ -42,12 +47,23 @@ class CoinInfo extends React.Component {
   }
 
 
-
   render() {
+    const data = this.state.coinData;
+    console.log(data);
+
+    if(data == null) return null;
+
     return (
-      <div className="container">
-        <h1>Coin Info Page</h1>
-      </div>
+      //Object.keys(data).map((key) => (
+
+        <div className="container">
+          <h1>Coin Info Page</h1>
+          <h2>{this.state.coinData.Name}</h2>
+          <p>{this.state.coinData.Description}</p>
+          <p>{this.state.coinData.Technology}</p>
+          <p>{this.state.coinData.Features}</p>
+        </div>
+      //))
     )
   }
 }
