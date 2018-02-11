@@ -55,9 +55,21 @@
     width: 80%;
   }
 
-  h2 {
+/*  h2 {
     text-align: center;
     margin-bottom: 1em;
+  }
+*/
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .coin-name {
+    margin: auto;
+    text-align: center;
+    font-size: 1.8em;
   }
 
   h3 {
@@ -76,9 +88,10 @@
       padding-bottom: .5em;
     }
 
-    a {
-      display: block;
-      text-align: center;
-    }
+  }
+
+  #website-link {
+    display: block;
+    text-align: center;
   }
 }

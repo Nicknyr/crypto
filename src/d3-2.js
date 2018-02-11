@@ -1,11 +1,12 @@
 import React from 'react';
 import * as d3 from 'd3';
-
+import CoinInfo from './snapshot';
 
 class Chart extends React.Component {
 
   componentDidMount() {
-    var url = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=200&aggregate=3&e=CCCAGG";
+    const coinId = "BTC";
+    var url = `https://min-api.cryptocompare.com/data/histoday?fsym=` + coinId + `&tsym=USD&limit=200&aggregate=3&e=CCCAGG`;
 
         // This needs to be changed to my API request
     d3.json(url).get(function(error, d) {

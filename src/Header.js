@@ -8,7 +8,7 @@ const Header = () => {
       <div className="nav">
         <ul>
           <li><NavLink to="/" exact activeStyle={{color: "red"}}>Home</NavLink></li>
-          <li>><NavLink to="/info" activeStyle={{color: "red"}}>Info</NavLink></li>
+          <li>><NavLink to="/coininfo" activeStyle={{color: "red"}}>Info</NavLink></li>
           <li>><NavLink to="/coinlist" activeStyle={{color: "red"}}>List</NavLink></li>
         </ul>
       </div>
