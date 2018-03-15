@@ -16,7 +16,7 @@ class CoinInfo extends React.Component {
   // Adding https://cors-anywhere.herokuapp.com/ to API URL fixed the CORS error
   //https://www.cryptocompare.com/api/data/coinsnapshotfullbyid/?id=1182
   componentDidMount() {
-    const coinID = 7605;
+    const coinID = 1182;
 
     axios.get(`https://cors-anywhere.herokuapp.com/https://www.cryptocompare.com/api/data/coinsnapshotfullbyid/?id=` + coinID)
     .then(res => {
@@ -39,13 +39,22 @@ class CoinInfo extends React.Component {
         <div>
           <Header />
           <div className="container">
-            <h1>Coin Info Page</h1>
+            <div className="coin-name" dangerouslySetInnerHTML={{__html: this.state.coinData.Name + " Information"}}></div>
             <Chart />
-            <div className="coin-name" dangerouslySetInnerHTML={{__html: this.state.coinData.Name}}></div>
-            <div className="coin-info" dangerouslySetInnerHTML={{__html: this.state.coinData.Description}}></div>
+
+            <h3>Description</h3>
+            <div className="coin-info" dangerouslySetInnerHTML={{__html: this.state.coinData.Description}}>
+            </div>
+
+            <h3>Features</h3>
             <div className="coin-info" dangerouslySetInnerHTML={{__html: this.state.coinData.Features}}></div>
+
+            <h3>Technology</h3>
             <div className="coin-info" dangerouslySetInnerHTML={{__html: this.state.coinData.Technology}}></div>
-            <div className="coin-info"  id="website-link" dangerouslySetInnerHTML={{__html: "Official " + this.state.coinData.Website + " website"}}></div>
+
+            <div className="coin-info"  id="website-link" dangerouslySetInnerHTML={{__html: "Official " + this.state.coinData.Website + " website"}}>
+            </div>
+
           </div>
           <Footer />
         </div>

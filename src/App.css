@@ -122,10 +122,10 @@ a:hover {
   p {
     line-height: 1.8;
     font-size: 1em; }
-  a {
+  #website-link {
+    display: block;
     text-align: center;
-    font-size: 1.1em;
-    display: block; }
+    margin-top: 2.5em; }
   /*  .chart-container {
     width: 100%;
   }
@@ -142,16 +142,13 @@ a:hover {
     display: inline-block;
     position: absolute;
     top: 10px;
-    left: 0; } }
+    left: 0; }
+  #chartId {
+    width: 100%; } }
 
 @media (min-width: 1200px) {
   .container {
     width: 80%; }
-  /*  h2 {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-*/
   h1 {
     text-align: center;
     margin-bottom: 1em; }
@@ -161,17 +158,18 @@ a:hover {
     font-size: 1.8em; }
   h3 {
     text-align: center;
-    margin-top: 2em;
+    margin-top: 2.5em;
     font-size: 1.4em;
     font-weight: bolder; }
   .coin-info p {
-    width: 80%;
+    width: 70%;
     margin: auto;
     padding-top: .5em;
     padding-bottom: .5em; }
   #website-link {
     display: block;
-    text-align: center; } }
+    text-align: center;
+    margin-top: 2.5em; } }
 
 .search-box {
   margin-top: 5em;
@@ -203,6 +201,8 @@ form {
     z-index: 2;
     top: 120px;
     left: 25%; }
+  h2 {
+    text-align: center; }
   #mag {
     max-height: 1.65em;
     max-width: 1.65em;

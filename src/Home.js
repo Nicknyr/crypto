@@ -11,8 +11,8 @@ const Home = (props) => {
     <div>
       <Header />
       <div className="container">
+      <h2>Home Page</h2>
       <Searchbar/>
-        <h2>Home Page</h2>
       </div>
       <Footer />
     </div>
